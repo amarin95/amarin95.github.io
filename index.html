@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alberto Marín - Full Stack & Flutter Developer</title>
-  
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
   <!-- AOS Animation -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -68,9 +71,9 @@
             </h1>
             <h2 class="hero-subtitle">Full Stack & Flutter Developer</h2>
             <p class="hero-description">
-              Passionate about creating beautiful, functional applications. 
-              Expert in Flutter, Angular, and Spring. Currently tech-leading 
-              Flutter apps and Angular projects from home in Vigo, Spain.
+              Passionate about creating beautiful, functional applications.
+              Expert in Flutter, Angular, and Spring. Currently tech-leading
+              Flutter apps and Angular projects from home in Mondariz, Spain.
             </p>
             <div class="hero-buttons">
               <a href="#projects" class="btn btn-primary btn-lg me-3">
@@ -144,19 +147,20 @@ class HomePage extends StatelessWidget {
         <div class="col-lg-6" data-aos="fade-right">
           <div class="about-content">
             <p class="about-text">
-              I'm a full-stack software developer with a passion for creating innovative applications. 
-              Since 2018, I've been working on diverse projects, from mobile apps to web applications, 
+              I'm a full-stack software developer with a passion for creating innovative applications.
+              Since 2018, I've been working on diverse projects, from mobile apps to web applications,
               always striving to deliver high-quality solutions.
             </p>
             <p class="about-text">
-              My journey began with Telecommunications Engineering, which gave me a strong foundation 
-              in both hardware and software concepts. I discovered Flutter in 2019 and immediately 
+              My journey began with Telecommunications Engineering, which gave me a strong foundation
+              in both hardware and software concepts. I discovered Flutter in 2019 and immediately
               fell in love with its cross-platform capabilities and beautiful UI framework.
             </p>
             <p class="about-text">
-              Currently, I'm working as a tech lead for Flutter applications and managing several 
-              Angular projects. I enjoy working from home and collaborating with teams to build 
-              amazing products that make a difference.
+              Currently, I'm working as a tech lead for Flutter applications and managing several
+              Angular projects. I enjoy working from home and collaborating with teams to build
+              amazing products that make a difference. I made a course for UNED focused on teaching AI basics to no
+              experenced students, which has been a rewarding experience.
             </p>
             <div class="about-stats">
               <div class="stat-item">
@@ -177,8 +181,10 @@ class HomePage extends StatelessWidget {
         <div class="col-lg-6" data-aos="fade-left">
           <div class="about-image">
             <div class="tech-stack">
-              <div class="tech-item" data-aos="zoom-in" data-aos-delay="100">
-                <i class="fab fa-flutter"></i>
+              <div class="tech-item" data-aos="zoom-in" data-aos-delay="100"
+                style="display: flex; flex-direction: column; align-items: center;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"
+                  style="height:2em; margin-bottom: 1.5em; display: block;">
                 <span>Flutter</span>
               </div>
               <div class="tech-item" data-aos="zoom-in" data-aos-delay="200">
@@ -310,22 +316,27 @@ class HomePage extends StatelessWidget {
         <!-- Flutter Swipping Button -->
         <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
           <div class="project-card">
-            <div class="project-image">
-              <i class="fab fa-flutter"></i>
+            <div class="project-image"
+              style="display: flex; justify-content: center; align-items: center; height: 115px;">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"
+                style="height:2em; display: block; filter: brightness(0) invert(1);">
             </div>
             <div class="project-content">
               <h3>Flutter Swipping Button</h3>
-              <p>A custom animated swipping button widget for Flutter with rollback animation and configurable delay. Published as a package on pub.dev.</p>
+              <p>A custom animated swipping button widget for Flutter with rollback animation and configurable delay.
+                Published as a package on pub.dev.</p>
               <div class="project-tech">
                 <span class="tech-tag">Flutter</span>
                 <span class="tech-tag">Dart</span>
                 <span class="tech-tag">Animation</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/amarin95/flutter-swipping-button" target="_blank" class="btn btn-sm btn-outline-primary">
+                <a href="https://github.com/amarin95/flutter-swipping-button" target="_blank"
+                  class="btn btn-sm btn-outline-primary">
                   <i class="fab fa-github me-1"></i>View Code
                 </a>
-                <a href="https://pub.dev/packages/flutter_swipping_button" target="_blank" class="btn btn-sm btn-primary">
+                <a href="https://pub.dev/packages/flutter_swipping_button" target="_blank"
+                  class="btn btn-sm btn-primary">
                   <i class="fas fa-external-link-alt me-1"></i>Pub.dev
                 </a>
               </div>
@@ -341,14 +352,16 @@ class HomePage extends StatelessWidget {
             </div>
             <div class="project-content">
               <h3>FCDG Angular</h3>
-              <p>A 4chan drinking game webapp built with Angular 8+ and Firebase. Features real-time updates and interactive gameplay.</p>
+              <p>A 4chan drinking game webapp built with Angular 8+ and Firebase. Features real-time updates and
+                interactive gameplay.</p>
               <div class="project-tech">
                 <span class="tech-tag">Angular</span>
                 <span class="tech-tag">TypeScript</span>
                 <span class="tech-tag">Firebase</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/amarin95/fcdg-angular" target="_blank" class="btn btn-sm btn-outline-primary">
+                <a href="https://github.com/amarin95/fcdg-angular" target="_blank"
+                  class="btn btn-sm btn-outline-primary">
                   <i class="fab fa-github me-1"></i>View Code
                 </a>
               </div>
@@ -364,7 +377,8 @@ class HomePage extends StatelessWidget {
             </div>
             <div class="project-content">
               <h3>Kanji Deck</h3>
-              <p>A Flutter app for learning Japanese kanji characters. Features flashcards, progress tracking, and spaced repetition learning.</p>
+              <p>A Flutter app for learning Japanese kanji characters. Features flashcards, progress tracking, and
+                spaced repetition learning.</p>
               <div class="project-tech">
                 <span class="tech-tag">Flutter</span>
                 <span class="tech-tag">Dart</span>
@@ -387,7 +401,8 @@ class HomePage extends StatelessWidget {
             </div>
             <div class="project-content">
               <h3>Lampreia1 Bot</h3>
-              <p>A competition bot for playing LIA (Language Intelligence Agent) game. Built with Java and advanced AI algorithms.</p>
+              <p>A competition bot for playing LIA (Language Intelligence Agent) game. Built with Java and advanced AI
+                algorithms.</p>
               <div class="project-tech">
                 <span class="tech-tag">Java</span>
                 <span class="tech-tag">AI</span>
@@ -410,14 +425,16 @@ class HomePage extends StatelessWidget {
             </div>
             <div class="project-content">
               <h3>Flutter Clicker</h3>
-              <p>A clicker game developed in Flutter for testing microtransactions and in-app purchases. Features engaging gameplay mechanics.</p>
+              <p>A clicker game developed in Flutter for testing microtransactions and in-app purchases. Features
+                engaging gameplay mechanics.</p>
               <div class="project-tech">
                 <span class="tech-tag">Flutter</span>
                 <span class="tech-tag">Dart</span>
                 <span class="tech-tag">Games</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/amarin95/flutter-clicker" target="_blank" class="btn btn-sm btn-outline-primary">
+                <a href="https://github.com/amarin95/flutter-clicker" target="_blank"
+                  class="btn btn-sm btn-outline-primary">
                   <i class="fab fa-github me-1"></i>View Code
                 </a>
               </div>
@@ -433,14 +450,16 @@ class HomePage extends StatelessWidget {
             </div>
             <div class="project-content">
               <h3>NBA Calvo App</h3>
-              <p>A Flutter app featuring Guille Jiménez's best quotes. A fun and entertaining mobile application with a unique concept.</p>
+              <p>A Flutter app featuring Guille Jiménez's best quotes. A fun and entertaining mobile application with a
+                unique concept.</p>
               <div class="project-tech">
                 <span class="tech-tag">Flutter</span>
                 <span class="tech-tag">Dart</span>
                 <span class="tech-tag">Entertainment</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/amarin95/nba-calvo-app" target="_blank" class="btn btn-sm btn-outline-primary">
+                <a href="https://github.com/amarin95/nba-calvo-app" target="_blank"
+                  class="btn btn-sm btn-outline-primary">
                   <i class="fab fa-github me-1"></i>View Code
                 </a>
               </div>
@@ -464,13 +483,13 @@ class HomePage extends StatelessWidget {
         <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
           <div class="contact-content text-center">
             <p class="contact-description">
-              I'm always interested in new opportunities and exciting projects. 
+              I'm always interested in new opportunities and exciting projects.
               Whether you have a question or just want to say hi, feel free to reach out!
             </p>
             <div class="contact-info">
               <div class="contact-item">
                 <i class="fas fa-map-marker-alt"></i>
-                <span>Vigo, Spain</span>
+                <span>Mondariz, Spain</span>
               </div>
               <div class="contact-item">
                 <i class="fas fa-envelope"></i>
@@ -520,4 +539,5 @@ class HomePage extends StatelessWidget {
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>
