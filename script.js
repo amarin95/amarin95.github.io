@@ -7,22 +7,37 @@ document.addEventListener('DOMContentLoaded', function() {
         mirror: false
     });
 
-    // Smooth scrolling for navigation links
+    // Smooth scrolling for navigation links and hero buttons
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    // Function to handle smooth scrolling
+    function handleSmoothScroll(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetSection = document.querySelector(targetId);
+        
+        if (targetSection) {
+            const offsetTop = targetSection.offsetTop - 80; // Account for fixed navbar
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    }
+    
+    // Add event listeners to navigation links
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            if (targetSection) {
-                const offsetTop = targetSection.offsetTop - 80; // Account for fixed navbar
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
-            }
-        });
+        link.addEventListener('click', handleSmoothScroll);
+    });
+    
+    // Use event delegation for hero buttons
+    document.addEventListener('click', function(e) {
+        console.log('Click detected on:', e.target);
+        if (e.target.closest('.hero-buttons .btn')) {
+            const button = e.target.closest('.hero-buttons .btn');
+            console.log('Hero button clicked:', button.textContent.trim());
+            handleSmoothScroll.call(button, e);
+        }
     });
 
     // Active navigation highlighting
@@ -237,8 +252,8 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.boxShadow = '0 4px 15px rgba(0, 212, 255, 0.3)';
     });
 
-    // Particle effect for hero section (optional)
-    createParticles();
+    // Particle effect for hero section (disabled for button functionality)
+    // createParticles();
 });
 
 // Particle effect function
@@ -255,7 +270,8 @@ function createParticles() {
         width: 100%;
         height: 100%;
         overflow: hidden;
-        z-index: 1;
+        z-index: 0;
+        pointer-events: none;
     `;
 
     for (let i = 0; i < 50; i++) {
