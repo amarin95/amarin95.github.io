@@ -1,135 +1,523 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./styles.css" />
-  <title>Alberto Marín</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-    crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <title>Alberto Marín - Full Stack & Flutter Developer</title>
+  
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
-
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">
-      <img src="assets/images/githubLogo.jpg" alt="" width="25" class="d-inline-block align-text-top" />
-      @amarin95
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Intro</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About Me</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
 <body>
-  <div class="bg home"></div>
-  <div class="bg-text container sixtyfour-convergence-font">
-    <h1>Welcome to my personal page</h1>
-    <a href="https://github.com/amarin95"><i class="fa fa-github"></i> Check my last projects on my github page</a>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fab fa-github me-2"></i>
+        @amarin95
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-
-  </div>
-
-  <div class="container custom-section" id="about">
-    <h2>About Me</h2>
-    <p>Placeholder text for the About Me section. This section will describe the individual's background, skills, and interests.</p>
-  </div>
-
-  <div class="container custom-section" id="projects">
-    <h2>Projects</h2>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="card mb-3">
-          <img src="assets/images/side-card.png" class="card-img-top" alt="Project 1 Placeholder">
-          <div class="card-body">
-            <h5 class="card-title">Project 1</h5>
-            <p class="card-text">Placeholder description for Project 1. Details about the project, technologies used, and a link to the project can go here.</p>
-            <a href="#" class="btn btn-primary">View Project</a>
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Hi, I'm <span class="highlight">Alberto Marín</span>
+            </h1>
+            <h2 class="hero-subtitle">Full Stack & Flutter Developer</h2>
+            <p class="hero-description">
+              Passionate about creating beautiful, functional applications. 
+              Expert in Flutter, Angular, and Spring. Currently tech-leading 
+              Flutter apps and Angular projects from home in Vigo, Spain.
+            </p>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary btn-lg me-3">
+                <i class="fas fa-code me-2"></i>View Projects
+              </a>
+              <a href="#contact" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-envelope me-2"></i>Get In Touch
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-3">
-          <img src="assets/images/side-card.png" class="card-img-top" alt="Project 2 Placeholder">
-          <div class="card-body">
-            <h5 class="card-title">Project 2</h5>
-            <p class="card-text">Placeholder description for Project 2. Details about the project, technologies used, and a link to the project can go here.</p>
-            <a href="#" class="btn btn-primary">View Project</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card mb-3">
-          <img src="assets/images/side-card.png" class="card-img-top" alt="Project 3 Placeholder">
-          <div class="card-body">
-            <h5 class="card-title">Project 3</h5>
-            <p class="card-text">Placeholder description for Project 3. Details about the project, technologies used, and a link to the project can go here.</p>
-            <a href="#" class="btn btn-primary">View Project</a>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="hero-image">
+            <div class="code-window">
+              <div class="window-header">
+                <div class="window-buttons">
+                  <span class="btn-red"></span>
+                  <span class="btn-yellow"></span>
+                  <span class="btn-green"></span>
+                </div>
+                <span class="window-title">flutter_app.dart</span>
+              </div>
+              <div class="window-content">
+                <pre><code class="language-dart">
+class PortfolioApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Alberto Marín',
+      theme: ThemeData.dark(),
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Text(
+          'Welcome to my portfolio!',
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
+  }
+}
+                </code></pre>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="container custom-section" id="contact">
-    <h2>Contact</h2>
-    <p>Placeholder text for the Contact section. Include ways to get in touch, or a simple contact form (form functionality not required for this step, just the structure).</p>
-    <p>You can reach me via the social media links in the footer, or email me at <a href="mailto:alberx1965@gmail.com">alberx1965@gmail.com</a>.</p>
-  </div>
-
-  <script>
-    AOS.init();
-  </script>
-  <footer>
-    <div class="container footer-elements" id="footer">
-
-      <div class="container rrss">
-        <a href="https://www.linkedin.com/in/amarin95/" class="fa fa-linkedin" target="_blank"></a>
-        <a href="https://github.com/amarin95" class="fa fa-github" target="_blank"></a>
-        <a href="mailto:alberx1965@gmail.com" class="fa fa-envelope"></a>
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12" data-aos="fade-up">
+          <h2 class="section-title">About Me</h2>
+          <div class="section-divider"></div>
+        </div>
       </div>
-
-      <div class="container">
-        <img style="height: 50px;" src="./assets/images/sponsor.jpg">
-        <a href="http://www.maringilabogados.com" style="color: whitesmoke;">My legal advisors</a>
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="about-content">
+            <p class="about-text">
+              I'm a full-stack software developer with a passion for creating innovative applications. 
+              Since 2018, I've been working on diverse projects, from mobile apps to web applications, 
+              always striving to deliver high-quality solutions.
+            </p>
+            <p class="about-text">
+              My journey began with Telecommunications Engineering, which gave me a strong foundation 
+              in both hardware and software concepts. I discovered Flutter in 2019 and immediately 
+              fell in love with its cross-platform capabilities and beautiful UI framework.
+            </p>
+            <p class="about-text">
+              Currently, I'm working as a tech lead for Flutter applications and managing several 
+              Angular projects. I enjoy working from home and collaborating with teams to build 
+              amazing products that make a difference.
+            </p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <h3>5+</h3>
+                <p>Years Experience</p>
+              </div>
+              <div class="stat-item">
+                <h3>30+</h3>
+                <p>Projects</p>
+              </div>
+              <div class="stat-item">
+                <h3>3</h3>
+                <p>GitHub Stars</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="about-image">
+            <div class="tech-stack">
+              <div class="tech-item" data-aos="zoom-in" data-aos-delay="100">
+                <i class="fab fa-flutter"></i>
+                <span>Flutter</span>
+              </div>
+              <div class="tech-item" data-aos="zoom-in" data-aos-delay="200">
+                <i class="fab fa-angular"></i>
+                <span>Angular</span>
+              </div>
+              <div class="tech-item" data-aos="zoom-in" data-aos-delay="300">
+                <i class="fab fa-java"></i>
+                <span>Java</span>
+              </div>
+              <div class="tech-item" data-aos="zoom-in" data-aos-delay="400">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="tech-item" data-aos="zoom-in" data-aos-delay="500">
+                <i class="fab fa-python"></i>
+                <span>Python</span>
+              </div>
+              <div class="tech-item" data-aos="zoom-in" data-aos-delay="600">
+                <i class="fas fa-database"></i>
+                <span>MongoDB</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
+    </div>
+  </section>
 
+  <!-- Skills Section -->
+  <section id="skills" class="section bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12" data-aos="fade-up">
+          <h2 class="section-title">Skills & Technologies</h2>
+          <div class="section-divider"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-category">
+            <h3><i class="fas fa-mobile-alt me-2"></i>Mobile Development</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <span class="skill-name">Flutter</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 95%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Dart</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Android</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-category">
+            <h3><i class="fas fa-globe me-2"></i>Web Development</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <span class="skill-name">Angular</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 88%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">JavaScript</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">TypeScript</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="skill-category">
+            <h3><i class="fas fa-server me-2"></i>Backend & Database</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <span class="skill-name">Java Spring</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">MongoDB</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">MySQL</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12" data-aos="fade-up">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="section-divider"></div>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Flutter Swipping Button -->
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fab fa-flutter"></i>
+            </div>
+            <div class="project-content">
+              <h3>Flutter Swipping Button</h3>
+              <p>A custom animated swipping button widget for Flutter with rollback animation and configurable delay. Published as a package on pub.dev.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Dart</span>
+                <span class="tech-tag">Animation</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/amarin95/flutter-swipping-button" target="_blank" class="btn btn-sm btn-outline-primary">
+                  <i class="fab fa-github me-1"></i>View Code
+                </a>
+                <a href="https://pub.dev/packages/flutter_swipping_button" target="_blank" class="btn btn-sm btn-primary">
+                  <i class="fas fa-external-link-alt me-1"></i>Pub.dev
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FCDG Angular -->
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fab fa-angular"></i>
+            </div>
+            <div class="project-content">
+              <h3>FCDG Angular</h3>
+              <p>A 4chan drinking game webapp built with Angular 8+ and Firebase. Features real-time updates and interactive gameplay.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Angular</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">Firebase</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/amarin95/fcdg-angular" target="_blank" class="btn btn-sm btn-outline-primary">
+                  <i class="fab fa-github me-1"></i>View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kanji Deck -->
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-language"></i>
+            </div>
+            <div class="project-content">
+              <h3>Kanji Deck</h3>
+              <p>A Flutter app for learning Japanese kanji characters. Features flashcards, progress tracking, and spaced repetition learning.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Dart</span>
+                <span class="tech-tag">Education</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/amarin95/kanji_deck" target="_blank" class="btn btn-sm btn-outline-primary">
+                  <i class="fab fa-github me-1"></i>View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lampreia1 Bot -->
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-robot"></i>
+            </div>
+            <div class="project-content">
+              <h3>Lampreia1 Bot</h3>
+              <p>A competition bot for playing LIA (Language Intelligence Agent) game. Built with Java and advanced AI algorithms.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">AI</span>
+                <span class="tech-tag">Game Bot</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/amarin95/lampreia1" target="_blank" class="btn btn-sm btn-outline-primary">
+                  <i class="fab fa-github me-1"></i>View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flutter Clicker -->
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <div class="project-content">
+              <h3>Flutter Clicker</h3>
+              <p>A clicker game developed in Flutter for testing microtransactions and in-app purchases. Features engaging gameplay mechanics.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Dart</span>
+                <span class="tech-tag">Games</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/amarin95/flutter-clicker" target="_blank" class="btn btn-sm btn-outline-primary">
+                  <i class="fab fa-github me-1"></i>View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NBA Calvo App -->
+        <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="project-card">
+            <div class="project-image">
+              <i class="fas fa-basketball-ball"></i>
+            </div>
+            <div class="project-content">
+              <h3>NBA Calvo App</h3>
+              <p>A Flutter app featuring Guille Jiménez's best quotes. A fun and entertaining mobile application with a unique concept.</p>
+              <div class="project-tech">
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">Dart</span>
+                <span class="tech-tag">Entertainment</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/amarin95/nba-calvo-app" target="_blank" class="btn btn-sm btn-outline-primary">
+                  <i class="fab fa-github me-1"></i>View Code
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12" data-aos="fade-up">
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="section-divider"></div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+          <div class="contact-content text-center">
+            <p class="contact-description">
+              I'm always interested in new opportunities and exciting projects. 
+              Whether you have a question or just want to say hi, feel free to reach out!
+            </p>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Vigo, Spain</span>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:alberx1965@gmail.com">alberx1965@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <i class="fas fa-home"></i>
+                <span>Hoping to work from home</span>
+              </div>
+            </div>
+            <div class="social-links">
+              <a href="https://github.com/amarin95" target="_blank" class="social-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/amarin95/" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="mailto:alberx1965@gmail.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p>&copy; 2025 Alberto Marín. Built with ❤️ and lots of ☕</p>
+          <p class="footer-note">
+            <small>
+              <i class="fas fa-balance-scale me-1"></i>
+              Legal advice provided by <a href="http://www.maringilabogados.com" target="_blank">Marín Gil Abogados</a>
+            </small>
+          </p>
+        </div>
       </div>
     </div>
   </footer>
-</body>
 
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
